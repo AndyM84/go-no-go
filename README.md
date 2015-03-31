@@ -32,3 +32,5 @@ The following people are on the team currently, but more help is always welcome!
 * Jordan Cain
 * Matthew Hykes
 * Moises Silva
+
+Also, feel free to come chat with us on [IRC](http://widget01.mibbit.com/?settings=522f69525a0c38ae917e5c5a66d6bab3&server=irc.zibings.net&channel=%23GoNoGo)
