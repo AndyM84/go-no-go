@@ -1,0 +1,17 @@
+Intermediate/Build
+Intermediate/Shaders
+Intermediate/ProjectFiles/obj
+*.bin
+Saved
+Cooked
+Progress
+Binaries
+Packaged
+DerivedDataCache
+Content/Maps/Local_Map.umap
+*.sdf
+*.opensdf
+*.suo
+*.umap
+*.user
+*.sln.ide

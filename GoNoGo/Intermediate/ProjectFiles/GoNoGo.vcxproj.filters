@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\GoNoGo.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{6A692547-CF53-4C82-B909-33CB57C7655F}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\GoNoGo.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\GoNoGoEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{026EBAE3-4CCC-46A5-8DE2-E5C393EC1930}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\GoNoGo">
+			<UniqueIdentifier>{2E38FFCB-2483-4577-A756-CC403BD9C5D0}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\Source\GoNoGo\BlueprintHelpers.cpp">
+			<Filter>Source\GoNoGo</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\GoNoGo\BlueprintHelpers.h">
+			<Filter>Source\GoNoGo</Filter>
+		</ClInclude >
+		<None Include="..\..\Source\GoNoGo\GoNoGo.Build.cs">
+			<Filter>Source\GoNoGo</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\GoNoGo\GoNoGo.cpp">
+			<Filter>Source\GoNoGo</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\GoNoGo\GoNoGo.h">
+			<Filter>Source\GoNoGo</Filter>
+		</ClInclude >
+		<Filter Include="Source\GoNoGo\Resources">
+			<UniqueIdentifier>{3ECC7D25-E612-4866-9093-79E8845A11A3}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Source\GoNoGo\Resources\Windows">
+			<UniqueIdentifier>{0F09826B-1962-403D-B0B1-CFFFF8EE8287}</UniqueIdentifier>
+		</Filter>
+		<ResourceCompile Include="..\..\Source\GoNoGo\Resources\Windows\GoNoGo.rc">
+			<Filter>Source\GoNoGo\Resources\Windows</Filter>
+		</ResourceCompile >
+	</ItemGroup>
+</Project>
