@@ -1,5 +1,4 @@
-/GoNoGo/Intermediate/Build
-/GoNoGo/Intermediate/Shaders
+/GoNoGo/Intermediate/ProjectFiles/LocalConfig.props
 /GoNoGo/Intermediate/ProjectFiles/obj
 *.bin
 /GoNoGo/Saved
