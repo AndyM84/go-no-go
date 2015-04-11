@@ -3,7 +3,6 @@
 #pragma once
 
 #include <N2f.hpp>
-
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "BlueprintHelpers.generated.h"
 

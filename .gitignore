@@ -1,4 +1,6 @@
 /GoNoGo/Intermediate/ProjectFiles/LocalConfig.props
+/GoNoGo/Intermediate/Build
+/GoNoGo/Intermediate/Config
 /GoNoGo/Intermediate/ProjectFiles/obj
 *.bin
 /GoNoGo/Saved
