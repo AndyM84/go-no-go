@@ -93,6 +93,7 @@
   <PropertyGroup Label="UserMacros" />
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="LocalConfig.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|x64'">
     <IncludePath />
@@ -110,6 +111,7 @@
   </PropertyGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="LocalConfig.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|x64'">
     <IncludePath />
@@ -120,13 +122,14 @@
     <ExcludePath />
     <OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
     <IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
-    <NMakeBuildCommandLine>"C:\Program Files\Epic Games\4.7\Engine\Build\BatchFiles\Build.bat" GoNoGoEditor Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject" -rocket</NMakeBuildCommandLine>
-    <NMakeReBuildCommandLine>"C:\Program Files\Epic Games\4.7\Engine\Build\BatchFiles\Rebuild.bat" GoNoGoEditor Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject" -rocket</NMakeReBuildCommandLine>
-    <NMakeCleanCommandLine>"C:\Program Files\Epic Games\4.7\Engine\Build\BatchFiles\Clean.bat" GoNoGoEditor Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject" -rocket</NMakeCleanCommandLine>
-    <NMakeOutput>C:\Program Files\Epic Games\4.7\Engine\Binaries\Win64\UE4Editor.exe</NMakeOutput>
+    <NMakeBuildCommandLine>"$(Ue4Install)\Engine\Build\BatchFiles\Build.bat" GoNoGoEditor Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject" -rocket</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>"$(Ue4Install)\Engine\Build\BatchFiles\Rebuild.bat" GoNoGoEditor Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject" -rocket</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>"$(Ue4Install)\Engine\Build\BatchFiles\Clean.bat" GoNoGoEditor Win64 DebugGame "$(SolutionDir)$(ProjectName).uproject" -rocket</NMakeCleanCommandLine>
+    <NMakeOutput>$(Ue4Install)\Engine\Binaries\Win64\UE4Editor.exe</NMakeOutput>
   </PropertyGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="LocalConfig.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|x64'">
     <IncludePath />
@@ -144,6 +147,7 @@
   </PropertyGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="LocalConfig.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|x64'">
     <IncludePath>$(SolutionDir)Source\GoNoGo\include;$(IncludePath)</IncludePath>
@@ -161,6 +165,22 @@
   </PropertyGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="LocalConfig.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Development_Game|Win32'">
+    <Import Project="LocalConfig.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|Win32'">
+    <Import Project="LocalConfig.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|x64'">
+    <Import Project="LocalConfig.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|Win32'">
+    <Import Project="LocalConfig.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Development_Editor|Win32'">
+    <Import Project="LocalConfig.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|Win32'">
     <IncludePath />
