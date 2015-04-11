@@ -10,15 +10,46 @@
 void EmptyLinkFunctionForGeneratedCodeGoNoGo() {}
 	void UBlueprintHelpers::StaticRegisterNativesUBlueprintHelpers()
 	{
+		FNativeFunctionRegistrar::RegisterFunction(UBlueprintHelpers::StaticClass(),"TestMethod",(Native)&UBlueprintHelpers::execTestMethod);
 	}
-	IMPLEMENT_CLASS(UBlueprintHelpers, 3115884565);
+	IMPLEMENT_CLASS(UBlueprintHelpers, 2155317663);
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
 	ENGINE_API class UClass* Z_Construct_UClass_UBlueprintFunctionLibrary();
 
+	GONOGO_API class UFunction* Z_Construct_UFunction_UBlueprintHelpers_TestMethod();
 	GONOGO_API class UClass* Z_Construct_UClass_UBlueprintHelpers_NoRegister();
 	GONOGO_API class UClass* Z_Construct_UClass_UBlueprintHelpers();
 	GONOGO_API class UPackage* Z_Construct_UPackage_GoNoGo();
+	UFunction* Z_Construct_UFunction_UBlueprintHelpers_TestMethod()
+	{
+		struct BlueprintHelpers_eventTestMethod_Parms
+		{
+			float InputFloat1;
+			float FirstFloat;
+			float SecondFloat;
+		};
+		UClass* OuterClass=Z_Construct_UClass_UBlueprintHelpers();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("TestMethod"), RF_Public|RF_Transient|RF_Native) UFunction(FObjectInitializer(), NULL, 0x04420401, 65535, sizeof(BlueprintHelpers_eventTestMethod_Parms));
+			UProperty* NewProp_SecondFloat = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("SecondFloat"), RF_Public|RF_Transient|RF_Native) UFloatProperty(CPP_PROPERTY_BASE(SecondFloat, BlueprintHelpers_eventTestMethod_Parms), 0x0000000000000180);
+			UProperty* NewProp_FirstFloat = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("FirstFloat"), RF_Public|RF_Transient|RF_Native) UFloatProperty(CPP_PROPERTY_BASE(FirstFloat, BlueprintHelpers_eventTestMethod_Parms), 0x0000000000000180);
+			UProperty* NewProp_InputFloat1 = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("InputFloat1"), RF_Public|RF_Transient|RF_Native) UFloatProperty(CPP_PROPERTY_BASE(InputFloat1, BlueprintHelpers_eventTestMethod_Parms), 0x0000000000000082);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Blueprint Tests"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("BlueprintHelpers.h"));
+			MetaData->SetValue(NewProp_SecondFloat, TEXT("ModuleRelativePath"), TEXT("BlueprintHelpers.h"));
+			MetaData->SetValue(NewProp_FirstFloat, TEXT("ModuleRelativePath"), TEXT("BlueprintHelpers.h"));
+			MetaData->SetValue(NewProp_InputFloat1, TEXT("ModuleRelativePath"), TEXT("BlueprintHelpers.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_UBlueprintHelpers_NoRegister()
 	{
 		return UBlueprintHelpers::StaticClass();
@@ -36,7 +67,9 @@ void EmptyLinkFunctionForGeneratedCodeGoNoGo() {}
 				UObjectForceRegistration(OuterClass);
 				OuterClass->ClassFlags |= 0x20100080;
 
+				OuterClass->LinkChild(Z_Construct_UFunction_UBlueprintHelpers_TestMethod());
 
+				OuterClass->AddFunctionToFunctionMap(Z_Construct_UFunction_UBlueprintHelpers_TestMethod()); // 692627661
 				OuterClass->StaticLink();
 #if WITH_METADATA
 				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
@@ -57,8 +90,8 @@ void EmptyLinkFunctionForGeneratedCodeGoNoGo() {}
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/GoNoGo")), false, false));
 			ReturnPackage->PackageFlags |= PKG_CompiledIn | 0x00000000;
 			FGuid Guid;
-			Guid.A = 0x3D98A1BC;
-			Guid.B = 0x6D542439;
+			Guid.A = 0x227AE3DC;
+			Guid.B = 0x1B8F4A6D;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

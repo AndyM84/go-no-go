@@ -13,10 +13,32 @@
 #define GONOGO_BlueprintHelpers_generated_h
 
 #define UBlueprintHelpers_EVENTPARMS
-#define UBlueprintHelpers_RPC_WRAPPERS
+#define UBlueprintHelpers_RPC_WRAPPERS \
+ \
+ \
+	DECLARE_FUNCTION(execTestMethod) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,InputFloat1); \
+		P_GET_PROPERTY_REF(UFloatProperty,Out_FirstFloat); \
+		P_GET_PROPERTY_REF(UFloatProperty,Out_SecondFloat); \
+		P_FINISH; \
+		this->TestMethod(InputFloat1,Out_FirstFloat,Out_SecondFloat); \
+	}
+
+
 #define UBlueprintHelpers_RPC_WRAPPERS_NO_PURE_DECLS \
 	static inline void StaticChecks_Implementation_Validate() \
 	{ \
+	} \
+ \
+ \
+	DECLARE_FUNCTION(execTestMethod) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,InputFloat1); \
+		P_GET_PROPERTY_REF(UFloatProperty,Out_FirstFloat); \
+		P_GET_PROPERTY_REF(UFloatProperty,Out_SecondFloat); \
+		P_FINISH; \
+		this->TestMethod(InputFloat1,Out_FirstFloat,Out_SecondFloat); \
 	}
 
 
