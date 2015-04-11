@@ -24,6 +24,7 @@ The rules engine will be built in C++ to facilitate integration with existing si
 
 1. Generate dynamic launch requirements for scenarios
 2. Provide information for launch simulation to know when problems should occur
+3. Interface with model rocket systems for real-life repurcussions
 
 ## Team Members
 The following people are on the team currently, but more help is always welcome!
