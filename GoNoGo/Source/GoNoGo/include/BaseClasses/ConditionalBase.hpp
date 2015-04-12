@@ -5,8 +5,20 @@
 
 class ConditionalBase : public N2f::NodeBase
 {
+private:
+	time_t _statusUpdated;
+	RESULT_STATUSES _status;
+
+protected:
+	void UpdateStatus();
+	void SetStatus(RESULT_STATUSES Status);
+
 public:
-	virtual	~ConditionalBase(){}
+
+	ConditionalBase();
+	ConditionalBase(std::string Key, RESULT_STATUSES Status);
+
+	time_t GetStatusUpdateTime();
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////
 	/// <summary>	Virtual to check isAcceptable. </summary>
@@ -16,3 +28,4 @@ public:
 	////////////////////////////////////////////////////////////////////////////////////////////////////
 	virtual bool IsAcceptable() = 0;
 };
+
