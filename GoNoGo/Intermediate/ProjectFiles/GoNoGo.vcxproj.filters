@@ -134,5 +134,11 @@
     <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\ConditionalBase.cpp">
       <Filter>Source\GoNoGo\Source\BaseClasses</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\src\Results\RangeResult.cpp">
+      <Filter>Source\GoNoGo\Source\Results</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\src\Dispatches\LaunchDispatch.cpp">
+      <Filter>Source\GoNoGo\Source\Dispatches</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
