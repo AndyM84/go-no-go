@@ -79,6 +79,12 @@
     <Filter Include="Source\GoNoGo\Source\Nodes">
       <UniqueIdentifier>{c448f684-673e-42c1-8357-a51d54d4fa35}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\GoNoGo\Headers\Results">
+      <UniqueIdentifier>{419b8aa9-905d-42e4-856e-f048cd37b499}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\GoNoGo\Source\Results">
+      <UniqueIdentifier>{625649c1-c545-472d-861c-48e3e9d1599c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\GoNoGo\include\BaseClasses\DispatchBase.hpp">
@@ -93,6 +99,36 @@
     <ClInclude Include="..\..\Source\GoNoGo\include\N2f.hpp">
       <Filter>Source\GoNoGo\Headers</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\GoNoGo\include\BaseClasses\HoldBase.hpp">
+      <Filter>Source\GoNoGo\Headers\BaseClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GoNoGo\include\BaseClasses\ConditionalBase.hpp">
+      <Filter>Source\GoNoGo\Headers\BaseClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GoNoGo\include\BaseClasses\GoNoGo.hpp">
+      <Filter>Source\GoNoGo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GoNoGo\include\Dispatches\LaunchDispatch.hpp">
+      <Filter>Source\GoNoGo\Headers\Dispatches</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GoNoGo\include\BaseClasses\ResultBase.hpp">
+      <Filter>Source\GoNoGo\Headers\BaseClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GoNoGo\include\Results\RangeResult.hpp">
+      <Filter>Source\GoNoGo\Headers\Results</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GoNoGo\include\Results\VectorResult.hpp">
+      <Filter>Source\GoNoGo\Headers\Results</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GoNoGo\include\Results\IntResult.hpp">
+      <Filter>Source\GoNoGo\Headers\Results</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GoNoGo\include\Results\StringResult.hpp">
+      <Filter>Source\GoNoGo\Headers\Results</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GoNoGo\include\Results\BoolResult.hpp">
+      <Filter>Source\GoNoGo\Headers\Results</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\DispatchBase.cpp">
@@ -103,6 +139,33 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\GoNoGo\src\Helpers\ChainHelper.cpp">
       <Filter>Source\GoNoGo\Source\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\HoldBase.cpp">
+      <Filter>Source\GoNoGo\Source\BaseClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\ConditionalBase.cpp">
+      <Filter>Source\GoNoGo\Source\BaseClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\src\Results\RangeResult.cpp">
+      <Filter>Source\GoNoGo\Source\Results</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\src\Dispatches\LaunchDispatch.cpp">
+      <Filter>Source\GoNoGo\Source\Dispatches</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\src\Results\VectorResult.cpp">
+      <Filter>Source\GoNoGo\Source\Results</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\src\Results\BoolResult.cpp">
+      <Filter>Source\GoNoGo\Source\Results</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\src\Results\IntResult.cpp">
+      <Filter>Source\GoNoGo\Source\Results</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\src\Results\StringResult.cpp">
+      <Filter>Source\GoNoGo\Source\Results</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\ResultBase.cpp">
+      <Filter>Source\GoNoGo\Source\BaseClasses</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
