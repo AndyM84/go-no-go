@@ -13,7 +13,7 @@ public:
 	FuelPressurizationHold();
 	FuelPressurizationHold(RESULT_STATUSES PreviousStatus);
 
-	void SetFuelPressure(FVector2D fuelLevel);
+	void SetFuelPressure(FVector2D fuelPressure);
 	FVector2D getFuelPressure();
 
 	void Process(void *Sender, std::shared_ptr<N2f::DispatchBase> Dispatch);

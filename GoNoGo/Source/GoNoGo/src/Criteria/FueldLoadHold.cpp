@@ -18,3 +18,9 @@ void FuelLoadHold::Process(void *Sender, std::shared_ptr<N2f::DispatchBase> Disp
 	// TODO: Once Dispatch Base processes are put together, complete this class
 
 }
+
+void FuelLoadHold::SetFuelLevel(FVector2D fuelLevel) {
+	_reportedFuelLevel = fuelLevel;
+}
+
+FVector2D FuelLoadHold::getFuelLevel() { return _reportedFuelLevel; }

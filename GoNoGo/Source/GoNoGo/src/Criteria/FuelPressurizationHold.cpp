@@ -20,3 +20,10 @@ void FuelPressurizationHold::Process(void *Sender, std::shared_ptr<N2f::Dispatch
 	// TODO: Once Dispatch Base processes are put together, complete this class
 
 }
+
+void FuelPressurizationHold::SetFuelPressure(FVector2D fuelPressure) {
+
+	_reportedFuelPressure = fuelPressure;
+}
+
+FVector2D FuelPressurizationHold::getFuelPressure() { _reportedFuelPressure; }
