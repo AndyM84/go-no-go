@@ -43,6 +43,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\GoNoGo\PlayerUI.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\ConditionalBase.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\DispatchBase.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\HoldBase.cpp" />
@@ -50,7 +51,6 @@
     <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\ResultBase.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\Dispatches\LaunchDispatch.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\Helpers\ChainHelper.cpp" />
-    <ClCompile Include="..\..\Source\GoNoGo\src\Results\BoolResult.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\Results\IntResult.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\Results\RangeResult.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\Results\StringResult.cpp" />
@@ -61,14 +61,15 @@
     <ClInclude Include="..\..\Source\GoNoGo\include\BaseClasses\HoldBase.hpp" />
     <ClInclude Include="..\..\Source\GoNoGo\include\BaseClasses\NodeBase.hpp" />
     <ClInclude Include="..\..\Source\GoNoGo\include\BaseClasses\ResultBase.hpp" />
+    <ClInclude Include="..\..\Source\GoNoGo\include\Core.hpp" />
     <ClInclude Include="..\..\Source\GoNoGo\include\Dispatches\LaunchDispatch.hpp" />
     <ClInclude Include="..\..\Source\GoNoGo\include\Helpers\ChainHelper.hpp" />
     <ClInclude Include="..\..\Source\GoNoGo\include\N2f.hpp" />
-    <ClInclude Include="..\..\Source\GoNoGo\include\Results\BoolResult.hpp" />
     <ClInclude Include="..\..\Source\GoNoGo\include\Results\IntResult.hpp" />
     <ClInclude Include="..\..\Source\GoNoGo\include\Results\RangeResult.hpp" />
     <ClInclude Include="..\..\Source\GoNoGo\include\Results\StringResult.hpp" />
     <ClInclude Include="..\..\Source\GoNoGo\include\Results\VectorResult.hpp" />
+    <ClInclude Include="..\..\Source\GoNoGo\PlayerUI.h" />
     <None Include="..\..\GoNoGo.uproject" />
     <None Include="..\..\Source\GoNoGo.Target.cs" />
     <None Include="..\..\Source\GoNoGoEditor.Target.cs" />
