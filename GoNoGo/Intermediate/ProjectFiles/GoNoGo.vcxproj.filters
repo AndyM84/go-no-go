@@ -93,6 +93,15 @@
     <ClInclude Include="..\..\Source\GoNoGo\include\N2f.hpp">
       <Filter>Source\GoNoGo\Headers</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\GoNoGo\include\BaseClasses\HoldBase.hpp">
+      <Filter>Source\GoNoGo\Headers\BaseClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GoNoGo\include\BaseClasses\ConditionalBase.hpp">
+      <Filter>Source\GoNoGo\Headers\BaseClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GoNoGo\include\BaseClasses\GoNoGo.hpp">
+      <Filter>Source\GoNoGo\Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\DispatchBase.cpp">
@@ -103,6 +112,12 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\GoNoGo\src\Helpers\ChainHelper.cpp">
       <Filter>Source\GoNoGo\Source\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\HoldBase.cpp">
+      <Filter>Source\GoNoGo\Source\BaseClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\ConditionalBase.cpp">
+      <Filter>Source\GoNoGo\Source\BaseClasses</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
