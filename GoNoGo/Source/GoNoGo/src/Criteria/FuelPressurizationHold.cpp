@@ -8,7 +8,7 @@ FuelPressurizationHold::FuelPressurizationHold() : FuelPressurizationHold(INVALI
 
 }
 
-FuelPressurizationHold::FuelPressurizationHold(RESULT_STATUSES PreviousStatus) : HoldBase("FuelPressure", PreviousStatus) {
+FuelPressurizationHold::FuelPressurizationHold(RESULT_STATUSES PreviousStatus) : HoldBase("FuelPressure", INVALID) {
 
 	FVector2D initialFuelPressure = FVector2D(0, 0);
 

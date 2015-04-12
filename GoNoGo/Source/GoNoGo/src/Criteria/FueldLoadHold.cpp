@@ -6,7 +6,7 @@ FuelLoadHold::FuelLoadHold() : FuelLoadHold(INVALID) {
 
 }
 
-FuelLoadHold::FuelLoadHold(RESULT_STATUSES PreviousStatus) : HoldBase("FuelLoad", PreviousStatus) {
+FuelLoadHold::FuelLoadHold(RESULT_STATUSES PreviousStatus) : HoldBase("FuelLoad", INVALID) {
 
 	FVector2D initialFuelLevel = FVector2D(0, 0);
 
