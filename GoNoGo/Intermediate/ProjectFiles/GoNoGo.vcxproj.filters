@@ -102,6 +102,9 @@
     <ClInclude Include="..\..\Source\GoNoGo\include\BaseClasses\GoNoGo.hpp">
       <Filter>Source\GoNoGo\Headers</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\GoNoGo\include\Dispatches\LaunchDispatch.hpp">
+      <Filter>Source\GoNoGo\Headers\Dispatches</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\DispatchBase.cpp">
