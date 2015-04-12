@@ -126,9 +126,6 @@
     <ClInclude Include="..\..\Source\GoNoGo\include\Results\StringResult.hpp">
       <Filter>Source\GoNoGo\Headers\Results</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\GoNoGo\include\Results\BoolResult.hpp">
-      <Filter>Source\GoNoGo\Headers\Results</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\DispatchBase.cpp">
@@ -153,9 +150,6 @@
       <Filter>Source\GoNoGo\Source\Dispatches</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\GoNoGo\src\Results\VectorResult.cpp">
-      <Filter>Source\GoNoGo\Source\Results</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\GoNoGo\src\Results\BoolResult.cpp">
       <Filter>Source\GoNoGo\Source\Results</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\GoNoGo\src\Results\IntResult.cpp">

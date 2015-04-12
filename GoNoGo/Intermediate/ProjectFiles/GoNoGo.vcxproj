@@ -50,7 +50,6 @@
     <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\ResultBase.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\Dispatches\LaunchDispatch.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\Helpers\ChainHelper.cpp" />
-    <ClCompile Include="..\..\Source\GoNoGo\src\Results\BoolResult.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\Results\IntResult.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\Results\RangeResult.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\Results\StringResult.cpp" />
@@ -64,7 +63,6 @@
     <ClInclude Include="..\..\Source\GoNoGo\include\Dispatches\LaunchDispatch.hpp" />
     <ClInclude Include="..\..\Source\GoNoGo\include\Helpers\ChainHelper.hpp" />
     <ClInclude Include="..\..\Source\GoNoGo\include\N2f.hpp" />
-    <ClInclude Include="..\..\Source\GoNoGo\include\Results\BoolResult.hpp" />
     <ClInclude Include="..\..\Source\GoNoGo\include\Results\IntResult.hpp" />
     <ClInclude Include="..\..\Source\GoNoGo\include\Results\RangeResult.hpp" />
     <ClInclude Include="..\..\Source\GoNoGo\include\Results\StringResult.hpp" />
