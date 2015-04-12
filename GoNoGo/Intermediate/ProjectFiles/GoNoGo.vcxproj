@@ -43,6 +43,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\GoNoGo\PlayerUI.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\ConditionalBase.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\DispatchBase.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\HoldBase.cpp" />
@@ -68,6 +69,7 @@
     <ClInclude Include="..\..\Source\GoNoGo\include\Results\RangeResult.hpp" />
     <ClInclude Include="..\..\Source\GoNoGo\include\Results\StringResult.hpp" />
     <ClInclude Include="..\..\Source\GoNoGo\include\Results\VectorResult.hpp" />
+    <ClInclude Include="..\..\Source\GoNoGo\PlayerUI.h" />
     <None Include="..\..\GoNoGo.uproject" />
     <None Include="..\..\Source\GoNoGo.Target.cs" />
     <None Include="..\..\Source\GoNoGoEditor.Target.cs" />
