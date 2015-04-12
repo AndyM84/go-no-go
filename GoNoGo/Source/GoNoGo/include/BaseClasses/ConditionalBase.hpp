@@ -6,8 +6,7 @@
 class ConditionalBase : public N2f::NodeBase
 {
 public:
-
-        virtual	~ConditionalBase(){}
+	virtual	~ConditionalBase(){}
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////
 	/// <summary>	Virtual to check isAcceptable. </summary>
