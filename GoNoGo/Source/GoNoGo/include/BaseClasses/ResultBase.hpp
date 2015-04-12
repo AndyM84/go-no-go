@@ -1,21 +1,11 @@
 #pragma once
 
-#include <string>
-#include <sstream>
-
-enum RESULT_STATUSES
-{
-	INVALID = 0,
-	GO,
-	NO_GO
-};
+#include <Core.hpp>
 
 class ResultBase
 {
 protected:
 	RESULT_STATUSES _status;
-
-	void SetStatus(RESULT_STATUSES Status);
 
 public:
 	ResultBase();

@@ -1,5 +1,6 @@
 #pragma once
 
+#include <Core.hpp>
 #include <BaseClasses/NodeBase.hpp>
 
 class ConditionalBase : public N2f::NodeBase

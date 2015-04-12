@@ -13,11 +13,6 @@ ResultBase::ResultBase(RESULT_STATUSES Status)
 	return;
 }
 
-void ResultBase::SetStatus(RESULT_STATUSES Status)
-{
-	return;
-}
-
 const RESULT_STATUSES ResultBase::GetStatus()
 {
 	return this->_status;
