@@ -15,6 +15,5 @@ class GONOGO_API UBlueprintHelpers : public UBlueprintFunctionLibrary
 	GENERATED_BODY()
 
 public:
-	UFUNCTION(BlueprintCallable, Category = "Blueprint Tests")
-	void TestMethod(const float InputFloat1, float &FirstFloat, float &SecondFloat);
+	
 };
