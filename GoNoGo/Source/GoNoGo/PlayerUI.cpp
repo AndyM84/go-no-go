@@ -3,6 +3,7 @@
 #include "GoNoGo.h"
 #include "PlayerUI.h"
 
-
-
-
+void UPlayerUI::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
+{
+	return;
+}
