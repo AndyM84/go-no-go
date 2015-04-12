@@ -164,5 +164,8 @@
     <ClCompile Include="..\..\Source\GoNoGo\src\Results\StringResult.cpp">
       <Filter>Source\GoNoGo\Source\Results</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\ResultBase.cpp">
+      <Filter>Source\GoNoGo\Source\BaseClasses</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

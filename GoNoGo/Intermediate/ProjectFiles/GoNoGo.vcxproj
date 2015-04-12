@@ -47,6 +47,7 @@
     <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\DispatchBase.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\HoldBase.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\NodeBase.cpp" />
+    <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\ResultBase.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\Dispatches\LaunchDispatch.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\Helpers\ChainHelper.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\Results\BoolResult.cpp" />
