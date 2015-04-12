@@ -129,6 +129,9 @@
     <ClInclude Include="..\..\Source\GoNoGo\include\Core.hpp">
       <Filter>Source\GoNoGo\Headers</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\GoNoGo\PlayerUI.h">
+      <Filter>Source\GoNoGo</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\DispatchBase.cpp">
@@ -163,6 +166,9 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\ResultBase.cpp">
       <Filter>Source\GoNoGo\Source\BaseClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\PlayerUI.cpp">
+      <Filter>Source\GoNoGo</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
