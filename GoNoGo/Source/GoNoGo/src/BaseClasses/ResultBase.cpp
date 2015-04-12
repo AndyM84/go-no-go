@@ -1,12 +1,32 @@
 #include "GoNoGo.h"
 #include <BaseClasses/ResultBase.hpp>
 
-void ResultBase::SetStatus(RESULT_STATUS Status)
+ResultBase::ResultBase()
 {
 	return;
 }
 
-RESULT_STATUS ResultBase::GetStatus()
+ResultBase::ResultBase(RESULT_STATUSES Status)
+{
+	this->_status = Status;
+
+	return;
+}
+
+void ResultBase::SetStatus(RESULT_STATUSES Status)
+{
+	return;
+}
+
+const RESULT_STATUSES ResultBase::GetStatus()
 {
 	return this->_status;
+}
+
+std::string ResultBase::ToJson()
+{
+	std::stringstream ss;
+	ss << "{ status: '" << this->_status << "' }";
+
+	return ss.str();
 }

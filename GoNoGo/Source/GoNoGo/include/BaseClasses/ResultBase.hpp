@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <sstream>
 
 enum RESULT_STATUSES
 {
@@ -21,5 +22,5 @@ public:
 	ResultBase(RESULT_STATUSES Status);
 
 	const RESULT_STATUSES GetStatus();
-	virtual std::string ToJson() = 0;
+	virtual std::string ToJson();
 };
