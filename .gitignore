@@ -13,5 +13,4 @@
 *.opensdf
 *.suo
 *.user
-*.sln.ide
-/GoNoGo
+*.sln.ides
