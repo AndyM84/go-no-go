@@ -1,6 +1,6 @@
 #pragma once
 
-#include <Core.cpp>
+#include <Core.hpp>
 #include <BaseClasses/ResultBase.hpp>
 
 class StringResult : public ResultBase
