@@ -85,6 +85,12 @@
     <Filter Include="Source\GoNoGo\Source\Results">
       <UniqueIdentifier>{625649c1-c545-472d-861c-48e3e9d1599c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\GoNoGo\Headers\Criteria">
+      <UniqueIdentifier>{1feb3552-df79-44e3-a6c4-262a8cba508b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\GoNoGo\Source\Criteria">
+      <UniqueIdentifier>{d4eb5e1b-c637-46eb-bc57-6a1182149ec9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\GoNoGo\include\BaseClasses\DispatchBase.hpp">
@@ -132,6 +138,9 @@
     <ClInclude Include="..\..\Source\GoNoGo\PlayerUI.h">
       <Filter>Source\GoNoGo</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\GoNoGo\include\Criteria\FuelLoadHold.hpp">
+      <Filter>Source\GoNoGo\Headers\Criteria</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\DispatchBase.cpp">
@@ -169,6 +178,9 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\GoNoGo\PlayerUI.cpp">
       <Filter>Source\GoNoGo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\src\Criteria\FueldLoadHold.cpp">
+      <Filter>Source\GoNoGo\Source\Criteria</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
