@@ -79,6 +79,12 @@
     <Filter Include="Source\GoNoGo\Source\Nodes">
       <UniqueIdentifier>{c448f684-673e-42c1-8357-a51d54d4fa35}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\GoNoGo\Headers\Results">
+      <UniqueIdentifier>{419b8aa9-905d-42e4-856e-f048cd37b499}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\GoNoGo\Source\Results">
+      <UniqueIdentifier>{625649c1-c545-472d-861c-48e3e9d1599c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\GoNoGo\include\BaseClasses\DispatchBase.hpp">
@@ -104,6 +110,12 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\GoNoGo\include\Dispatches\LaunchDispatch.hpp">
       <Filter>Source\GoNoGo\Headers\Dispatches</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GoNoGo\include\BaseClasses\ResultBase.hpp">
+      <Filter>Source\GoNoGo\Headers\BaseClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GoNoGo\include\Results\RangeResult.hpp">
+      <Filter>Source\GoNoGo\Headers\Results</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
