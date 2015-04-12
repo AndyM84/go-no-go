@@ -1,6 +1,8 @@
 #pragma once
 
+#include <string>
+
 class ResultBase
 {
-	virtual void SetResult() = 0;
+	virtual std::string ToJson() = 0;
 };
