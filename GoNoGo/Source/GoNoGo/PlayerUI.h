@@ -11,11 +11,18 @@ class GONOGO_API UPlayerUI : public UUserWidget
 {
 	GENERATED_BODY()
 
+private:
+	FVector2D _stage1Load, _stage2Load, _stage1Pressure, _stage2Pressure;
+	int32 _hours, _minutes, _seconds, _counter;
+	float _windAngle;
+
 public:
+	UPlayerUI(const FObjectInitializer& ObjectInitializer);
+
 	void NativeTick(const FGeometry& MyGeometry, float InDeltaTime);
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Go No Go|Launch Events")
-	void TickFuelLoad(const FVector2D Stage1, const FVector2D Stage2, float &LOXLevel1, float &LOXLevel2, float &LH2Level1, float &LH2Level2);
+	void TickFuelLoad(float &LOXLevel1, float &LOXLevel2, float &LH2Level1, float &LH2Level2);
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Go No Go|Launch Events")
 	void TickFuelPressure(float &LOXLevel1, float &LOXLevel2, float &LH2Level1, float &LH2Level2);
