@@ -11,6 +11,7 @@ private:
 
 protected:
 	void UpdateStatus();
+	void SetStatus(RESULT_STATUSES Status);
 
 public:
 

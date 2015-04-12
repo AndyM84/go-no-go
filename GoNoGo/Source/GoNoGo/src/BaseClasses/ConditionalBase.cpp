@@ -24,3 +24,8 @@ time_t ConditionalBase::GetStatusUpdateTime() {
 	return this->_statusUpdated;
 
 }
+
+void ConditionalBase::SetStatus(RESULT_STATUSES Status) {
+	this->_status = Status;
+	this->UpdateStatus();
+}
