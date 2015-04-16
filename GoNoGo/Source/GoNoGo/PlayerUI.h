@@ -3,7 +3,7 @@
 #include "Blueprint/UserWidget.h"
 #include "PlayerUI.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FUITickReceived, class AActor*, OtherActor, float, testing);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FUITickReceived, float, testing);
 
 /**
  * 

@@ -52,5 +52,7 @@ void UPlayerUI::ReceiveTick(FVector2D &Stage1FuelLoad, FVector2D &Stage2FuelLoad
 	Minutes = this->_minutes;
 	Seconds = this->_seconds;
 
+	this->OnTickReceived.Broadcast(12.0);
+
 	return;
 }
