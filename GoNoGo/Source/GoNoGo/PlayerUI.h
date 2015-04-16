@@ -3,10 +3,12 @@
 #include "Blueprint/UserWidget.h"
 #include "PlayerUI.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FUITickReceived, class AActor*, OtherActor, float, testing);
+
 /**
  * 
  */
-UCLASS()
+UCLASS(BlueprintType, Blueprintable)
 class GONOGO_API UPlayerUI : public UUserWidget
 {
 	GENERATED_BODY()
@@ -19,19 +21,8 @@ private:
 public:
 	UPlayerUI(const FObjectInitializer& ObjectInitializer);
 
-	/*void NativeTick(const FGeometry& MyGeometry, float InDeltaTime);
-
-	UFUNCTION(BlueprintNativeEvent, Category = "LaunchEvents")
-	void TickFuelLoad(float &LOXLevel1, float &LOXLevel2, float &LH2Level1, float &LH2Level2);
-
-	UFUNCTION(BlueprintNativeEvent, Category = "LaunchEvents")
-	void TickFuelPressure(float &LOXLevel1, float &LOXLevel2, float &LH2Level1, float &LH2Level2);
-
-	UFUNCTION(BlueprintNativeEvent, Category = "LaunchEvents")
-	void TickWindGauge(float &DirectionAngle);
-
-	UFUNCTION(BlueprintNativeEvent, Category = "LaunchEvents")
-	void TickCountdownTimer(int32 &Hours, int32 &Minutes, int32 &Seconds);*/
+	UPROPERTY(BlueprintAssignable)
+	FUITickReceived OnTickReceived;
 
 	UFUNCTION(BlueprintCallable, Category = "GoNoGo|LaunchEvents")
 	void ReceiveTick(FVector2D &Stage1FuelLoad, FVector2D &Stage2FuelLoad, FVector2D &Stage1FuelPressure, FVector2D &Stage2FuelPressure, float &WindDirection, int32 &Hours, int32 &Minutes, int32 &Seconds);

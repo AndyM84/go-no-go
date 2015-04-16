@@ -43,11 +43,6 @@ void UPlayerUI::ReceiveTick(FVector2D &Stage1FuelLoad, FVector2D &Stage2FuelLoad
 	this->_stage2Pressure.X = 0.73;
 	this->_stage2Pressure.Y = 0.44;
 
-	/*this->TickFuelLoad(this->_stage1Load.X, this->_stage1Load.Y, this->_stage2Load.X, this->_stage2Load.Y);
-	this->TickFuelPressure(this->_stage1Pressure.X, this->_stage2Pressure.Y, this->_stage1Pressure.Y, this->_stage2Pressure.Y);
-	this->TickWindGauge(this->_windAngle);
-	this->TickCountdownTimer(this->_hours, this->_minutes, this->_seconds);*/
-
 	Stage1FuelLoad = this->_stage1Load;
 	Stage2FuelLoad = this->_stage2Load;
 	Stage1FuelPressure = this->_stage1Pressure;

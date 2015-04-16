@@ -1,5 +1,4 @@
 #include "GoNoGo.h"
-
 #include <Criteria/FuelPressurizationHold.hpp>
 
 FuelPressurizationHold::FuelPressurizationHold() : FuelPressurizationHold(INVALID) {
@@ -26,4 +25,4 @@ void FuelPressurizationHold::SetFuelPressure(FVector2D fuelPressure) {
 	_reportedFuelPressure = fuelPressure;
 }
 
-FVector2D FuelPressurizationHold::getFuelPressure() { _reportedFuelPressure; }
+FVector2D FuelPressurizationHold::getFuelPressure() { return _reportedFuelPressure; }
