@@ -11,6 +11,13 @@
 		}
 	],
 	"TargetPlatforms": [
-		"WindowsNoEditor"
+		"WindowsNoEditor",
+		"Android",
+		"IOS",
+		"LinuxNoEditor",
+		"MacNoEditor",
+		"PS4",
+		"XboxOne",
+		"HTML5"
 	]
 }

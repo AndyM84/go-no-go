@@ -29,7 +29,7 @@ public:
 			return static_cast<T>(this->_holdResults.find(Key)->second);
 		}
 
-		return NULL;
+		return ResultBase(INVALID);
 	}
 
 	template<class T> const ResultBase GetConditionalResult(std::string Key)
@@ -39,7 +39,7 @@ public:
 			return static_cast<T>(this->_conditionalResults.find(Key)->second);
 		}
 
-		return NULL;
+		return ResultBase(INVALID);
 	}
 
 	const ResultBase GetConditionalResult(std::string Key);
