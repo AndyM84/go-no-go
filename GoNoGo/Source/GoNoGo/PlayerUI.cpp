@@ -15,6 +15,16 @@ UPlayerUI::UPlayerUI(const FObjectInitializer& ObjectInitializer) : Super(Object
 	return;
 }
 
+void UPlayerUI::NativeTick(const FGeometry &MyGeometry, float InDeltaTime)
+{
+	DidTick(InDeltaTime);
+}
+
+void UPlayerUI::DidTick_Implementation(float &DeltaTime)
+{
+	return;
+}
+
 void UPlayerUI::ReceiveTick(FVector2D &Stage1FuelLoad, FVector2D &Stage2FuelLoad, FVector2D &Stage1FuelPressure, FVector2D &Stage2FuelPressure, float &WindDirection, int32 &Hours, int32 &Minutes, int32 &Seconds)
 {
 	if (this->_seconds > 0 && this->_counter == 30)

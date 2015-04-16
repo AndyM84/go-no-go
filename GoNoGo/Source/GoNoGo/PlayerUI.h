@@ -24,6 +24,12 @@ public:
 	UPROPERTY(BlueprintAssignable)
 	FUITickReceived OnTickReceived;
 
+	void NativeTick(const FGeometry &MyGeometry, float InDeltaTime);
+
+	UFUNCTION(BlueprintNativeEvent, Category = "GoNoGo|LaunchEvents")
+	void DidTick(float &DeltaTime);
+	virtual void DidTick_Implementation(float &DeltaTime);
+
 	UFUNCTION(BlueprintCallable, Category = "GoNoGo|LaunchEvents")
 	void ReceiveTick(FVector2D &Stage1FuelLoad, FVector2D &Stage2FuelLoad, FVector2D &Stage1FuelPressure, FVector2D &Stage2FuelPressure, float &WindDirection, int32 &Hours, int32 &Minutes, int32 &Seconds);
 };
