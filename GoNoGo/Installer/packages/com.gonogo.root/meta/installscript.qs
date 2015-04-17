@@ -11,7 +11,6 @@ function Component() {
 	if (systemInfo.kernelType === "winnt") {
 		installer.componentByName("com.gonogo.root.win").setValue("Virtual", "false");
         installer.componentByName("com.gonogo.root.win").setValue("Default", "true");
-		installer.componentByName("com.gonogo.root.win").setValue("ForcedInstallation", "true");
 		installer.componentByName("com.gonogo.root.dx").setValue("Virtual", "false");
 		installer.componentByName("com.gonogo.root.dx").setValue("Default", "true");
 	}
@@ -19,6 +18,5 @@ function Component() {
 	if (systemInfo.kernelType === "darwin") {
 		installer.componentByName("com.gonogo.root.mac").setValue("Virtual", "false");
         installer.componentByName("com.gonogo.root.mac").setValue("Default", "true");
-		installer.componentByName("com.gonogo.root.mac").setValue("ForcedInstallation", "true");
 	}
 }

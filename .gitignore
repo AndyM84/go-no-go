@@ -2,13 +2,15 @@
 /GoNoGo/Intermediate/Build
 /GoNoGo/Intermediate/Config
 /GoNoGo/Intermediate/ProjectFiles/obj
-*.bin
 /GoNoGo/Saved
 /GoNoGo/Cooked
 /GoNoGo/Progress
 /GoNoGo/Packaged
 /GoNoGo/DerivedDataCache
 /GoNoGo/Content/Maps/Local_Map.umap
+/GoNoGo/Installer/repo
+/GoNoGo/Installer/*.exe
+*.bin
 *.sdf
 *.opensdf
 *.suo
