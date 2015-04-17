@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package>
+	<DisplayName>Go, No-Go</DisplayName>
+	<Description>Install Go, No-Go.</Description>
+	<Version>0.1</Version>
+	<ReleaseDate>2015-04-15</ReleaseDate>
+	<Default>script</Default>
+	<Script>installscript.qs</Script>
+</Package>
