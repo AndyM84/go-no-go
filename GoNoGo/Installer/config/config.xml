@@ -2,7 +2,7 @@
 <Installer>
 	<Name>Go, No-Go</Name>
 	<Version>0.1</Version>
-	<Title>Go, No-Go Installer</Title>
+	<Title>Go, No-Go</Title>
 	<Publisher>Go-No-Go</Publisher>
 	<StartMenuDir>Go, No-Go</StartMenuDir>
 	<TargetDir>@HomeDir@/go-no-go</TargetDir>
