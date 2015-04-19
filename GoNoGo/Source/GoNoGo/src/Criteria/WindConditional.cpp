@@ -1,10 +1,9 @@
+#include "GoNoGo.h"
 #include <Criteria/WindConditional.hpp>
-
 
 WindConditional::WindConditional()
 {
 }
-
 
 WindConditional::~WindConditional()
 {
