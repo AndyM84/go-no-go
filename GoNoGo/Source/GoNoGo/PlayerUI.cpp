@@ -23,6 +23,16 @@ UPlayerUI::UPlayerUI(const FObjectInitializer& ObjectInitializer) : Super(Object
 	return;
 }
 
+UPlayerUI::~UPlayerUI()
+{
+	if (this->_buttonStates.size() > 0)
+	{
+		this->_buttonStates.clear();
+	}
+
+	return;
+}
+
 void UPlayerUI::NativeTick(const FGeometry &MyGeometry, float InDeltaTime)
 {
 	DidTick(InDeltaTime);

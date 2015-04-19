@@ -16,3 +16,5 @@
 *.suo
 *.user
 *.sln.ides
+*.exe
+*.app

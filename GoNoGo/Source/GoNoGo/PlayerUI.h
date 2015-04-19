@@ -23,6 +23,7 @@ private:
 
 public:
 	UPlayerUI(const FObjectInitializer& ObjectInitializer);
+	~UPlayerUI();
 
 	UPROPERTY(BlueprintAssignable, Category = "GoNoGo")
 	FUITickReceived OnTickReceived;
