@@ -12,6 +12,24 @@ UPlayerUI::UPlayerUI(const FObjectInitializer& ObjectInitializer) : Super(Object
 	this->_windAngle = 23;
 	this->_counter = 0;
 
+	UTexture2D *goTexture = ConstructorHelpers::FObjectFinder<UTexture2D>(TEXT("Texture2D'/Game/Textures/GO.GO'")).Object;
+	this->_goButtonBrush.SetResourceObject(goTexture);
+	this->_goButtonBrush.ImageSize = FVector2D(goTexture->GetSizeX(), goTexture->GetSizeY());
+
+	UTexture2D *nogoTexture = ConstructorHelpers::FObjectFinder<UTexture2D>(TEXT("Texture2D'/Game/Textures/NOGO.NOGO'")).Object;
+	this->_nogoButtonBrush.SetResourceObject(nogoTexture);
+	this->_nogoButtonBrush.ImageSize = FVector2D(nogoTexture->GetSizeX(), nogoTexture->GetSizeY());
+
+	return;
+}
+
+UPlayerUI::~UPlayerUI()
+{
+	if (this->_buttonStates.size() > 0)
+	{
+		this->_buttonStates.clear();
+	}
+
 	return;
 }
 
@@ -63,6 +81,38 @@ void UPlayerUI::ReceiveTick(FVector2D &Stage1FuelLoad, FVector2D &Stage2FuelLoad
 	Seconds = this->_seconds;
 
 	this->OnTickReceived.Broadcast(12.0);
+
+	return;
+}
+
+void UPlayerUI::ToggleButton(const FString ButtonKey, FButtonStyle &ButtonStyle, FString &ButtonText)
+{
+	bool btnState = false;
+	std::map<const FString, bool>::iterator found = this->_buttonStates.find(ButtonKey);
+
+	if (found != this->_buttonStates.end())
+	{
+		btnState = found->second;
+	}
+
+	btnState = !btnState;
+
+	FButtonStyle style;
+	style.Normal = style.Hovered = style.Pressed = (btnState) ? this->_goButtonBrush : this->_nogoButtonBrush;
+
+	FString text = (btnState) ? "GO" : "NO GO";
+
+	ButtonStyle = style;
+	ButtonText = text;
+
+	if (found != this->_buttonStates.end())
+	{
+		this->_buttonStates[ButtonKey] = btnState;
+	}
+	else
+	{
+		this->_buttonStates.insert(std::pair<const FString, bool>(ButtonKey, btnState));
+	}
 
 	return;
 }
