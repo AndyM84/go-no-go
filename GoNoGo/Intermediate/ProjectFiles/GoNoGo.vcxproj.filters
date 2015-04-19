@@ -141,7 +141,7 @@
     <ClInclude Include="..\..\Source\GoNoGo\include\Criteria\FuelLoadHold.hpp">
       <Filter>Source\GoNoGo\Headers\Criteria</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\GoNoGo\include\Criteria\FuelPressurizationHold.hpp">
+    <ClInclude Include="..\..\Source\GoNoGo\include\Criteria\WindConditional.hpp">
       <Filter>Source\GoNoGo\Headers\Criteria</Filter>
     </ClInclude>
   </ItemGroup>
@@ -185,7 +185,7 @@
     <ClCompile Include="..\..\Source\GoNoGo\src\Criteria\FueldLoadHold.cpp">
       <Filter>Source\GoNoGo\Source\Criteria</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\GoNoGo\src\Criteria\FuelPressurizationHold.cpp">
+    <ClCompile Include="..\..\Source\GoNoGo\src\Criteria\WindConditional.cpp">
       <Filter>Source\GoNoGo\Source\Criteria</Filter>
     </ClCompile>
   </ItemGroup>
