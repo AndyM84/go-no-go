@@ -18,6 +18,7 @@ There are numerous ways in which the simulation could be expanded to add utility
 * Competition; Add ability to compete with friends by adding scoring based on metrics such as false-negative scrubs and success rates.
 * 'Real' simulation; Perform 6 hours of multiplayer cooperative launch in real time.
 * Data mining; User base can contribute to things such as improving automation or simulation logic for real launch systems.
+* Learning mode; Allows users to be taught about the various launch systems and constraints that they place on launch.
 
 ## Rules Engine
 The rules engine will be built in C++ to facilitate integration with existing simulations as well as any relevant data from external sources that can help with randomization or accuracy of the simulation.  The rules engine will have only two purposes:
