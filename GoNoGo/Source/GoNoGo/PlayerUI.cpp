@@ -36,16 +36,6 @@ UPlayerUI::~UPlayerUI()
 
 void UPlayerUI::NativeTick(const FGeometry &MyGeometry, float InDeltaTime)
 {
-	DidTick(InDeltaTime);
-}
-
-void UPlayerUI::DidTick_Implementation(float &DeltaTime)
-{
-	return;
-}
-
-void UPlayerUI::ReceiveTick(FVector2D &Stage1FuelLoad, FVector2D &Stage2FuelLoad, FVector2D &Stage1FuelPressure, FVector2D &Stage2FuelPressure, float &WindDirection, int32 &Hours, int32 &Minutes, int32 &Seconds)
-{
 	if (this->_isTicking)
 	{
 		if (this->_counter == 30)
@@ -75,30 +65,31 @@ void UPlayerUI::ReceiveTick(FVector2D &Stage1FuelLoad, FVector2D &Stage2FuelLoad
 		{
 			++this->_counter;
 		}
+
+		this->_stage1Load.X += 0.0023;
+		this->_stage1Load.Y += 0.032;
+		this->_stage2Load.X += 0.1;
+		this->_stage2Load.Y += 0.0005;
+
+		this->_stage1Pressure.X = 23;
+		this->_stage1Pressure.Y = 16;
+		this->_stage2Pressure.X = 44;
+		this->_stage2Pressure.Y = 86;
+
+		this->TClockTicked.Broadcast(this->_hours, this->_minutes, this->_seconds);
+		this->Stage1FuelLoaded.Broadcast(this->_stage1Load.X, this->_stage1Load.Y);
+		this->Stage2FuelLoaded.Broadcast(this->_stage2Load.X, this->_stage2Load.Y);
+		this->Stage1FuelPressurized.Broadcast(this->GetPSIAngle(this->_stage1Pressure.X), this->GetPSIAngle(this->_stage1Pressure.Y));
+		this->Stage2FuelPressurized.Broadcast(this->GetPSIAngle(this->_stage2Pressure.X), this->GetPSIAngle(this->_stage2Pressure.Y));
+		this->WindPulsed.Broadcast(this->_windAngle, 0.4);
 	}
 
-	this->_stage1Load.X += 0.0023;
-	this->_stage1Load.Y += 0.032;
-	this->_stage2Load.X += 0.1;
-	this->_stage2Load.Y += 0.0005;
-
-	this->_stage1Pressure.X = 0.12;
-	this->_stage1Pressure.Y = 0.34;
-	this->_stage2Pressure.X = 0.73;
-	this->_stage2Pressure.Y = 0.44;
-
-	Stage1FuelLoad = this->_stage1Load;
-	Stage2FuelLoad = this->_stage2Load;
-	Stage1FuelPressure = this->_stage1Pressure;
-	Stage2FuelPressure = this->_stage2Pressure;
-	WindDirection = this->_windAngle;
-	Hours = this->_hours;
-	Minutes = this->_minutes;
-	Seconds = this->_seconds;
-
-	this->OnTickReceived.Broadcast(12.0);
-
 	return;
+}
+
+float UPlayerUI::GetPSIAngle(float PSI)
+{
+	return ((270 * PSI) / 120) - 135;
 }
 
 void UPlayerUI::ToggleButton(const FString ButtonKey, FButtonStyle &ButtonStyle, FString &ButtonText)
@@ -129,6 +120,13 @@ void UPlayerUI::ToggleButton(const FString ButtonKey, FButtonStyle &ButtonStyle,
 	{
 		this->_buttonStates.insert(std::pair<const FString, bool>(ButtonKey, btnState));
 	}
+
+	return;
+}
+
+void UPlayerUI::ToggleTick()
+{
+	this->_isTicking = !this->_isTicking;
 
 	return;
 }

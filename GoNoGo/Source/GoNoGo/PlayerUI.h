@@ -4,7 +4,14 @@
 #include "Blueprint/UserWidget.h"
 #include "PlayerUI.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FUITickReceived, float, testing);
+// Declare all of our multicast events
+
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FUITClockTicked, float, Hours, float, Minutes, float, Seconds);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FUIStage1FuelLoaded, float, LoxLoad, float, Lh2Load);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FUIStage2FuelLoaded, float, LoxLoad, float, Lh2Load);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FUIStage1FuelPressurized, float, LoxPressure, float, Lh2Pressure);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FUIStage2FuelPressurized, float, LoxPressure, float, Lh2Pressure);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FUIWindPulsed, float, WindAngle, float, WindVelocity);
 
 /**
  * 
@@ -26,18 +33,30 @@ public:
 	UPlayerUI(const FObjectInitializer& ObjectInitializer);
 	~UPlayerUI();
 
-	UPROPERTY(BlueprintAssignable, Category = "GoNoGo")
-	FUITickReceived OnTickReceived;
-
 	void NativeTick(const FGeometry &MyGeometry, float InDeltaTime);
-
-	UFUNCTION(BlueprintNativeEvent, Category = "GoNoGo|LaunchEvents")
-	void DidTick(float &DeltaTime);
-	virtual void DidTick_Implementation(float &DeltaTime);
-
-	UFUNCTION(BlueprintCallable, Category = "GoNoGo|LaunchEvents")
-	void ReceiveTick(FVector2D &Stage1FuelLoad, FVector2D &Stage2FuelLoad, FVector2D &Stage1FuelPressure, FVector2D &Stage2FuelPressure, float &WindDirection, int32 &Hours, int32 &Minutes, int32 &Seconds);
+	float GetPSIAngle(float PSI);
 
 	UFUNCTION(BlueprintCallable, Category = "GoNoGo")
 	void ToggleButton(const FString ButtonKey, FButtonStyle &ButtonStyle, FString &ButtonText);
+
+	UFUNCTION(BlueprintCallable, Category = "GoNoGo")
+	void ToggleTick();
+
+	UPROPERTY(BlueprintAssignable, Category = "GoNoGo|LaunchEvents")
+	FUITClockTicked TClockTicked;
+
+	UPROPERTY(BlueprintAssignable, Category = "GoNoGo|LaunchEvents")
+	FUIStage1FuelLoaded Stage1FuelLoaded;
+
+	UPROPERTY(BlueprintAssignable, Category = "GoNoGo|LaunchEvents")
+	FUIStage2FuelLoaded Stage2FuelLoaded;
+
+	UPROPERTY(BlueprintAssignable, Category = "GoNoGo|LaunchEvents")
+	FUIStage1FuelPressurized Stage1FuelPressurized;
+
+	UPROPERTY(BlueprintAssignable, Category = "GoNoGo|LaunchEvents")
+	FUIStage2FuelPressurized Stage2FuelPressurized;
+
+	UPROPERTY(BlueprintAssignable, Category = "GoNoGo|LaunchEvents")
+	FUIWindPulsed WindPulsed;
 };
