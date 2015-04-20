@@ -12,6 +12,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FUIStage2FuelLoaded, float, LoxLoad
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FUIStage1FuelPressurized, float, LoxPressure, float, Lh2Pressure);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FUIStage2FuelPressurized, float, LoxPressure, float, Lh2Pressure);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FUIWindPulsed, float, WindAngle, float, WindVelocity);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FUILaunchCompleted, int32, LaunchCode);
 
 /**
  * 
@@ -28,6 +29,8 @@ private:
 	int32 _hours, _minutes, _seconds, _counter;
 	float _windAngle, _windVelocity;
 	bool _isTicking;
+
+	int32 LaunchEndState();
 
 public:
 	UPlayerUI(const FObjectInitializer& ObjectInitializer);
@@ -62,4 +65,7 @@ public:
 
 	UPROPERTY(BlueprintAssignable, Category = "GoNoGo|LaunchEvents")
 	FUIWindPulsed WindPulsed;
+
+	UPROPERTY(BlueprintAssignable, Category = "GoNoGo|LaunchEvents")
+	FUILaunchCompleted LaunchCompleted;
 };

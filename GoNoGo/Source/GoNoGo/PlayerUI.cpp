@@ -3,6 +3,34 @@
 #include "GoNoGo.h"
 #include "PlayerUI.h"
 
+int32 UPlayerUI::LaunchEndState()
+{
+	if (this->_isTicking)
+	{
+		return 2;
+	}
+
+	for (auto it = this->_buttonStates.begin(); it != this->_buttonStates.end(); it++)
+	{
+		if (!it->second)
+		{
+			return 1;
+		}
+	}
+
+	if (this->_windVelocity > 1.2 && (this->_windAngle > 1 && this->_windAngle < 25))
+	{
+		return 2;
+	}
+
+	if (this->_stage1Load.X < 1 || this->_stage1Load.Y < 1 || this->_stage2Load.X < 1 || this->_stage2Load.Y < 1)
+	{
+		return 2;
+	}
+
+	return 0;
+}
+
 UPlayerUI::UPlayerUI(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
 	this->_stage1Load = this->_stage1Pressure = this->_stage2Load = this->_stage2Pressure = FVector2D(0.0, 0.0);
@@ -104,6 +132,13 @@ void UPlayerUI::DoTick()
 					--this->_hours;
 					this->_minutes = 59;
 					this->_seconds = 59;
+				}
+				else
+				{
+					this->_isTicking = false;
+					this->LaunchCompleted.Broadcast(this->LaunchEndState());
+
+					return;
 				}
 			}
 
