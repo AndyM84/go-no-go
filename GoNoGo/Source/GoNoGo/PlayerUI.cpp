@@ -10,6 +10,7 @@ UPlayerUI::UPlayerUI(const FObjectInitializer& ObjectInitializer) : Super(Object
 	this->_minutes = 1;
 	this->_seconds = 4;
 	this->_windAngle = 23;
+	this->_windVelocity = 0.4;
 	this->_counter = 0;
 	this->_isTicking = false;
 
@@ -34,9 +35,12 @@ UPlayerUI::~UPlayerUI()
 	return;
 }
 
-float UPlayerUI::GetPSIAngle(float PSI)
+void UPlayerUI::GetPSIAngle(const float PSI, float &Angle)
 {
-	return ((270 * PSI) / 120) - 135;
+	float ag = ((270 * PSI) / 120) - 135;
+	Angle = ag;
+
+	return;
 }
 
 void UPlayerUI::ToggleButton(const FString ButtonKey, FButtonStyle &ButtonStyle, FString &ButtonText)
@@ -123,9 +127,9 @@ void UPlayerUI::DoTick()
 		this->TClockTicked.Broadcast(this->_hours, this->_minutes, this->_seconds);
 		this->Stage1FuelLoaded.Broadcast(this->_stage1Load.X, this->_stage1Load.Y);
 		this->Stage2FuelLoaded.Broadcast(this->_stage2Load.X, this->_stage2Load.Y);
-		this->Stage1FuelPressurized.Broadcast(this->GetPSIAngle(this->_stage1Pressure.X), this->GetPSIAngle(this->_stage1Pressure.Y));
-		this->Stage2FuelPressurized.Broadcast(this->GetPSIAngle(this->_stage2Pressure.X), this->GetPSIAngle(this->_stage2Pressure.Y));
-		this->WindPulsed.Broadcast(this->_windAngle, 0.4);
+		this->Stage1FuelPressurized.Broadcast(this->_stage1Pressure.X, this->_stage1Pressure.Y);
+		this->Stage2FuelPressurized.Broadcast(this->_stage2Pressure.X, this->_stage2Pressure.Y);
+		this->WindPulsed.Broadcast(this->_windAngle, this->_windVelocity);
 	}
 
 	return;

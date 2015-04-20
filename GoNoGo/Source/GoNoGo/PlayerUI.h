@@ -26,14 +26,15 @@ private:
 	FSlateBrush _goButtonBrush, _nogoButtonBrush;
 	std::map<const FString, bool> _buttonStates;
 	int32 _hours, _minutes, _seconds, _counter;
-	float _windAngle;
+	float _windAngle, _windVelocity;
 	bool _isTicking;
 
 public:
 	UPlayerUI(const FObjectInitializer& ObjectInitializer);
 	~UPlayerUI();
 
-	float GetPSIAngle(float PSI);
+	UFUNCTION(BlueprintCallable, Category = "GoNoGo")
+	void GetPSIAngle(const float PSI, float &Angle);
 
 	UFUNCTION(BlueprintCallable, Category = "GoNoGo")
 	void ToggleButton(const FString ButtonKey, FButtonStyle &ButtonStyle, FString &ButtonText);
