@@ -7,10 +7,11 @@ UPlayerUI::UPlayerUI(const FObjectInitializer& ObjectInitializer) : Super(Object
 {
 	this->_stage1Load = this->_stage1Pressure = this->_stage2Load = this->_stage2Pressure = FVector2D(0.0, 0.0);
 	this->_hours = 0;
-	this->_minutes = 0;
-	this->_seconds = 56;
+	this->_minutes = 1;
+	this->_seconds = 4;
 	this->_windAngle = 23;
 	this->_counter = 0;
+	this->_isTicking = true;
 
 	UTexture2D *goTexture = ConstructorHelpers::FObjectFinder<UTexture2D>(TEXT("Texture2D'/Game/Textures/GO.GO'")).Object;
 	this->_goButtonBrush.SetResourceObject(goTexture);
@@ -45,20 +46,35 @@ void UPlayerUI::DidTick_Implementation(float &DeltaTime)
 
 void UPlayerUI::ReceiveTick(FVector2D &Stage1FuelLoad, FVector2D &Stage2FuelLoad, FVector2D &Stage1FuelPressure, FVector2D &Stage2FuelPressure, float &WindDirection, int32 &Hours, int32 &Minutes, int32 &Seconds)
 {
-	if (this->_seconds > 0 && this->_counter == 30)
+	if (this->_isTicking)
 	{
-		this->_seconds -= 1;
-		this->_counter = 0;
-	}
-	else
-	{
-		if (this->_minutes > 0)
+		if (this->_counter == 30)
 		{
-			this->_minutes--;
-			this->_seconds = 60;
-		}
+			if (this->_seconds > 0)
+			{
+				--this->_seconds;
+			}
+			else if (this->_seconds == 0)
+			{
+				if (this->_minutes > 0)
+				{
+					--this->_minutes;
+					this->_seconds = 59;
+				}
+				else if (this->_minutes == 0 && this->_hours > 0)
+				{
+					--this->_hours;
+					this->_minutes = 59;
+					this->_seconds = 59;
+				}
+			}
 
-		this->_counter++;
+			this->_counter = 0;
+		}
+		else
+		{
+			++this->_counter;
+		}
 	}
 
 	this->_stage1Load.X += 0.0023;
