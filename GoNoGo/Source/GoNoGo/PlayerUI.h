@@ -20,6 +20,7 @@ private:
 	std::map<const FString, bool> _buttonStates;
 	int32 _hours, _minutes, _seconds, _counter;
 	float _windAngle;
+	bool _isTicking;
 
 public:
 	UPlayerUI(const FObjectInitializer& ObjectInitializer);
