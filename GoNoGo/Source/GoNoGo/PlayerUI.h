@@ -33,7 +33,6 @@ public:
 	UPlayerUI(const FObjectInitializer& ObjectInitializer);
 	~UPlayerUI();
 
-	void NativeTick(const FGeometry &MyGeometry, float InDeltaTime);
 	float GetPSIAngle(float PSI);
 
 	UFUNCTION(BlueprintCallable, Category = "GoNoGo")
@@ -41,6 +40,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "GoNoGo")
 	void ToggleTick();
+
+	UFUNCTION(BlueprintCallable, Category = "GoNoGo|LaunchEvents")
+	void DoTick();
 
 	UPROPERTY(BlueprintAssignable, Category = "GoNoGo|LaunchEvents")
 	FUITClockTicked TClockTicked;
