@@ -3,6 +3,22 @@
 #include "GoNoGo.h"
 #include "PlayerUI.h"
 
+void UPlayerUI::AddButtonState(const FString Key, bool State)
+{
+	std::map<const FString, bool>::iterator found = this->_buttonStates.find(Key);
+
+	if (found != this->_buttonStates.end())
+	{
+		this->_buttonStates[Key] = State;
+	}
+	else
+	{
+		this->_buttonStates.insert(std::pair<const FString, bool>(Key, State));
+	}
+
+	return;
+}
+
 int32 UPlayerUI::LaunchEndState()
 {
 	if (this->_isTicking)
@@ -50,6 +66,16 @@ UPlayerUI::UPlayerUI(const FObjectInitializer& ObjectInitializer) : Super(Object
 	this->_nogoButtonBrush.SetResourceObject(nogoTexture);
 	this->_nogoButtonBrush.ImageSize = FVector2D(nogoTexture->GetSizeX(), nogoTexture->GetSizeY());
 
+	this->AddButtonState(TEXT("TG_FT_01"), false);
+	this->AddButtonState(TEXT("TG_FT_02"), false);
+	this->AddButtonState(TEXT("TG_FT_03"), false);
+	this->AddButtonState(TEXT("TG_FT_04"), false);
+	this->AddButtonState(TEXT("WP"), false);
+	this->AddButtonState(TEXT("TG_PG_01"), false);
+	this->AddButtonState(TEXT("TG_PG_02"), false);
+	this->AddButtonState(TEXT("TG_PG_03"), false);
+	this->AddButtonState(TEXT("TG_PG_04"), false);
+
 	return;
 }
 
@@ -91,14 +117,7 @@ void UPlayerUI::ToggleButton(const FString ButtonKey, FButtonStyle &ButtonStyle,
 	ButtonStyle = style;
 	ButtonText = text;
 
-	if (found != this->_buttonStates.end())
-	{
-		this->_buttonStates[ButtonKey] = btnState;
-	}
-	else
-	{
-		this->_buttonStates.insert(std::pair<const FString, bool>(ButtonKey, btnState));
-	}
+	this->AddButtonState(ButtonKey, btnState);
 
 	return;
 }

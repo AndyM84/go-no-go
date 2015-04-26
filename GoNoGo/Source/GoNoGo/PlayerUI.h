@@ -30,6 +30,7 @@ private:
 	float _windAngle, _windVelocity;
 	bool _isTicking;
 
+	void AddButtonState(const FString Key, bool State);
 	int32 LaunchEndState();
 
 public:
