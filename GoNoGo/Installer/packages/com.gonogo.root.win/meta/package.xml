@@ -2,8 +2,8 @@
 <Package>
 	<DisplayName>Go, No-Go</DisplayName>
 	<Description>Install Go, No-Go for Windows.</Description>
-	<Version>0.1</Version>
-	<ReleaseDate>2015-04-15</ReleaseDate>
+	<Version>0.5</Version>
+	<ReleaseDate>2015-04-19</ReleaseDate>
 	<Default>script</Default>
 	<Script>installscript.qs</Script>
 </Package>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Installer>
 	<Name>Go, No-Go</Name>
-	<Version>0.1</Version>
+	<Version>0.5</Version>
 	<Title>Go, No-Go</Title>
 	<Publisher>Go-No-Go</Publisher>
 	<StartMenuDir>Go, No-Go</StartMenuDir>
