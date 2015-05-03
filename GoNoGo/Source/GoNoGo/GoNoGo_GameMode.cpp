@@ -12,5 +12,10 @@ void AGoNoGo_GameMode::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
 
+	for (auto PCI = GetWorld()->GetPlayerControllerIterator(); PCI; ++PCI)
+	{
+		
+	}
+
 	return;
 }

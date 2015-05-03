@@ -1,196 +1,208 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ItemGroup>
-		<None Include="..\..\GoNoGo.uproject" />
-		<Filter Include="Source">
-			<UniqueIdentifier>{B9C2D75E-2156-48E1-ACC6-DFC1C8A2D5AA}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\GoNoGo.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<None Include="..\..\Source\GoNoGoEditor.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<Filter Include="Config">
-			<UniqueIdentifier>{E9F13F00-C326-4349-9B43-A9EC91838E93}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Config\DefaultEditor.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEngine.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultGame.ini">
-			<Filter>Config</Filter>
-		</None >
-		<Filter Include="Source\GoNoGo">
-			<UniqueIdentifier>{3BB9E379-D81A-41C2-BBA8-74F95CD6A9B8}</UniqueIdentifier>
-		</Filter>
-		<ClCompile Include="..\..\Source\GoNoGo\BlueprintHelpers.cpp">
-			<Filter>Source\GoNoGo</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\GoNoGo\BlueprintHelpers.h">
-			<Filter>Source\GoNoGo</Filter>
-		</ClInclude >
-		<None Include="..\..\Source\GoNoGo\GoNoGo.Build.cs">
-			<Filter>Source\GoNoGo</Filter>
-		</None >
-		<ClCompile Include="..\..\Source\GoNoGo\GoNoGo.cpp">
-			<Filter>Source\GoNoGo</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\GoNoGo\GoNoGo.h">
-			<Filter>Source\GoNoGo</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\GoNoGo\GoNoGo_GameMode.cpp">
-			<Filter>Source\GoNoGo</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\GoNoGo\GoNoGo_GameMode.h">
-			<Filter>Source\GoNoGo</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\GoNoGo\PlayerUI.cpp">
-			<Filter>Source\GoNoGo</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\GoNoGo\PlayerUI.h">
-			<Filter>Source\GoNoGo</Filter>
-		</ClInclude >
-		<Filter Include="Source\GoNoGo\include">
-			<UniqueIdentifier>{C648E34D-92F0-4B6C-99AB-7C8CC5DCF145}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\GoNoGo\include\Core.hpp">
-			<Filter>Source\GoNoGo\include</Filter>
-		</None >
-		<None Include="..\..\Source\GoNoGo\include\N2f.hpp">
-			<Filter>Source\GoNoGo\include</Filter>
-		</None >
-		<Filter Include="Source\GoNoGo\include\BaseClasses">
-			<UniqueIdentifier>{A356D51F-F7BB-4200-8413-713E1893B22B}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\GoNoGo\include\BaseClasses\ConditionalBase.hpp">
-			<Filter>Source\GoNoGo\include\BaseClasses</Filter>
-		</None >
-		<None Include="..\..\Source\GoNoGo\include\BaseClasses\DispatchBase.hpp">
-			<Filter>Source\GoNoGo\include\BaseClasses</Filter>
-		</None >
-		<None Include="..\..\Source\GoNoGo\include\BaseClasses\GoNoGo.hpp">
-			<Filter>Source\GoNoGo\include\BaseClasses</Filter>
-		</None >
-		<None Include="..\..\Source\GoNoGo\include\BaseClasses\HoldBase.hpp">
-			<Filter>Source\GoNoGo\include\BaseClasses</Filter>
-		</None >
-		<None Include="..\..\Source\GoNoGo\include\BaseClasses\NodeBase.hpp">
-			<Filter>Source\GoNoGo\include\BaseClasses</Filter>
-		</None >
-		<None Include="..\..\Source\GoNoGo\include\BaseClasses\ResultBase.hpp">
-			<Filter>Source\GoNoGo\include\BaseClasses</Filter>
-		</None >
-		<Filter Include="Source\GoNoGo\include\Criteria">
-			<UniqueIdentifier>{CB43E2EA-B2F3-49F0-BF86-FA359FAABC56}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\GoNoGo\include\Criteria\FuelLoadHold.hpp">
-			<Filter>Source\GoNoGo\include\Criteria</Filter>
-		</None >
-		<None Include="..\..\Source\GoNoGo\include\Criteria\FuelPressurizationHold.hpp">
-			<Filter>Source\GoNoGo\include\Criteria</Filter>
-		</None >
-		<None Include="..\..\Source\GoNoGo\include\Criteria\WindConditional.hpp">
-			<Filter>Source\GoNoGo\include\Criteria</Filter>
-		</None >
-		<Filter Include="Source\GoNoGo\include\Dispatches">
-			<UniqueIdentifier>{0DB84DC6-F1A3-4013-9317-10A62700C2EC}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\GoNoGo\include\Dispatches\LaunchDispatch.hpp">
-			<Filter>Source\GoNoGo\include\Dispatches</Filter>
-		</None >
-		<Filter Include="Source\GoNoGo\include\Helpers">
-			<UniqueIdentifier>{D5BCD39C-818C-4278-855E-B6984FB483BC}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\GoNoGo\include\Helpers\ChainHelper.hpp">
-			<Filter>Source\GoNoGo\include\Helpers</Filter>
-		</None >
-		<Filter Include="Source\GoNoGo\include\Results">
-			<UniqueIdentifier>{D96FDE21-2A7F-4D44-B519-FDDB9CD48962}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\GoNoGo\include\Results\IntResult.hpp">
-			<Filter>Source\GoNoGo\include\Results</Filter>
-		</None >
-		<None Include="..\..\Source\GoNoGo\include\Results\RangeResult.hpp">
-			<Filter>Source\GoNoGo\include\Results</Filter>
-		</None >
-		<None Include="..\..\Source\GoNoGo\include\Results\StringResult.hpp">
-			<Filter>Source\GoNoGo\include\Results</Filter>
-		</None >
-		<None Include="..\..\Source\GoNoGo\include\Results\VectorResult.hpp">
-			<Filter>Source\GoNoGo\include\Results</Filter>
-		</None >
-		<Filter Include="Source\GoNoGo\Resources">
-			<UniqueIdentifier>{6846A3BA-338E-41AB-9628-DC6530E2308C}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="Source\GoNoGo\Resources\Windows">
-			<UniqueIdentifier>{49A33167-2F4F-449D-AF58-D0C81E89E0E7}</UniqueIdentifier>
-		</Filter>
-		<ResourceCompile Include="..\..\Source\GoNoGo\Resources\Windows\GoNoGo.rc">
-			<Filter>Source\GoNoGo\Resources\Windows</Filter>
-		</ResourceCompile >
-		<Filter Include="Source\GoNoGo\src">
-			<UniqueIdentifier>{1BB7F059-17F9-4386-970D-DC0AA22110A2}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="Source\GoNoGo\src\BaseClasses">
-			<UniqueIdentifier>{F37127F3-B01B-45F6-ADC3-63F466641F63}</UniqueIdentifier>
-		</Filter>
-		<ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\ConditionalBase.cpp">
-			<Filter>Source\GoNoGo\src\BaseClasses</Filter>
-		</ClCompile >
-		<ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\DispatchBase.cpp">
-			<Filter>Source\GoNoGo\src\BaseClasses</Filter>
-		</ClCompile >
-		<ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\HoldBase.cpp">
-			<Filter>Source\GoNoGo\src\BaseClasses</Filter>
-		</ClCompile >
-		<ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\NodeBase.cpp">
-			<Filter>Source\GoNoGo\src\BaseClasses</Filter>
-		</ClCompile >
-		<ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\ResultBase.cpp">
-			<Filter>Source\GoNoGo\src\BaseClasses</Filter>
-		</ClCompile >
-		<Filter Include="Source\GoNoGo\src\Criteria">
-			<UniqueIdentifier>{AB732B50-E0F5-4785-BF9C-9C3F153CBE0F}</UniqueIdentifier>
-		</Filter>
-		<ClCompile Include="..\..\Source\GoNoGo\src\Criteria\FueldLoadHold.cpp">
-			<Filter>Source\GoNoGo\src\Criteria</Filter>
-		</ClCompile >
-		<ClCompile Include="..\..\Source\GoNoGo\src\Criteria\FuelPressurizationHold.cpp">
-			<Filter>Source\GoNoGo\src\Criteria</Filter>
-		</ClCompile >
-		<ClCompile Include="..\..\Source\GoNoGo\src\Criteria\WindConditional.cpp">
-			<Filter>Source\GoNoGo\src\Criteria</Filter>
-		</ClCompile >
-		<Filter Include="Source\GoNoGo\src\Dispatches">
-			<UniqueIdentifier>{1BF80F2A-5D0E-4D6B-9AFF-3864B2456331}</UniqueIdentifier>
-		</Filter>
-		<ClCompile Include="..\..\Source\GoNoGo\src\Dispatches\LaunchDispatch.cpp">
-			<Filter>Source\GoNoGo\src\Dispatches</Filter>
-		</ClCompile >
-		<Filter Include="Source\GoNoGo\src\Helpers">
-			<UniqueIdentifier>{0E9308F4-592B-4986-8DE7-E6B54A9C607D}</UniqueIdentifier>
-		</Filter>
-		<ClCompile Include="..\..\Source\GoNoGo\src\Helpers\ChainHelper.cpp">
-			<Filter>Source\GoNoGo\src\Helpers</Filter>
-		</ClCompile >
-		<Filter Include="Source\GoNoGo\src\Results">
-			<UniqueIdentifier>{B3F07BA4-E784-4205-8E0B-4F00968B4A3F}</UniqueIdentifier>
-		</Filter>
-		<ClCompile Include="..\..\Source\GoNoGo\src\Results\IntResult.cpp">
-			<Filter>Source\GoNoGo\src\Results</Filter>
-		</ClCompile >
-		<ClCompile Include="..\..\Source\GoNoGo\src\Results\RangeResult.cpp">
-			<Filter>Source\GoNoGo\src\Results</Filter>
-		</ClCompile >
-		<ClCompile Include="..\..\Source\GoNoGo\src\Results\StringResult.cpp">
-			<Filter>Source\GoNoGo\src\Results</Filter>
-		</ClCompile >
-		<ClCompile Include="..\..\Source\GoNoGo\src\Results\VectorResult.cpp">
-			<Filter>Source\GoNoGo\src\Results</Filter>
-		</ClCompile >
-	</ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\GoNoGo.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{B9C2D75E-2156-48E1-ACC6-DFC1C8A2D5AA}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\GoNoGo.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\GoNoGoEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{E9F13F00-C326-4349-9B43-A9EC91838E93}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\GoNoGo">
+      <UniqueIdentifier>{3BB9E379-D81A-41C2-BBA8-74F95CD6A9B8}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GoNoGo\BlueprintHelpers.cpp">
+      <Filter>Source\GoNoGo</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GoNoGo\BlueprintHelpers.h">
+      <Filter>Source\GoNoGo</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\GoNoGo\GoNoGo.Build.cs">
+      <Filter>Source\GoNoGo</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\GoNoGo\GoNoGo.cpp">
+      <Filter>Source\GoNoGo</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GoNoGo\GoNoGo.h">
+      <Filter>Source\GoNoGo</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GoNoGo\GoNoGo_GameMode.cpp">
+      <Filter>Source\GoNoGo</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GoNoGo\GoNoGo_GameMode.h">
+      <Filter>Source\GoNoGo</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GoNoGo\PlayerUI.cpp">
+      <Filter>Source\GoNoGo</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GoNoGo\PlayerUI.h">
+      <Filter>Source\GoNoGo</Filter>
+    </ClInclude>
+    <Filter Include="Source\GoNoGo\include">
+      <UniqueIdentifier>{C648E34D-92F0-4B6C-99AB-7C8CC5DCF145}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\GoNoGo\include\Core.hpp">
+      <Filter>Source\GoNoGo\include</Filter>
+    </None>
+    <None Include="..\..\Source\GoNoGo\include\N2f.hpp">
+      <Filter>Source\GoNoGo\include</Filter>
+    </None>
+    <Filter Include="Source\GoNoGo\include\BaseClasses">
+      <UniqueIdentifier>{A356D51F-F7BB-4200-8413-713E1893B22B}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\GoNoGo\include\BaseClasses\ConditionalBase.hpp">
+      <Filter>Source\GoNoGo\include\BaseClasses</Filter>
+    </None>
+    <None Include="..\..\Source\GoNoGo\include\BaseClasses\DispatchBase.hpp">
+      <Filter>Source\GoNoGo\include\BaseClasses</Filter>
+    </None>
+    <None Include="..\..\Source\GoNoGo\include\BaseClasses\GoNoGo.hpp">
+      <Filter>Source\GoNoGo\include\BaseClasses</Filter>
+    </None>
+    <None Include="..\..\Source\GoNoGo\include\BaseClasses\HoldBase.hpp">
+      <Filter>Source\GoNoGo\include\BaseClasses</Filter>
+    </None>
+    <None Include="..\..\Source\GoNoGo\include\BaseClasses\NodeBase.hpp">
+      <Filter>Source\GoNoGo\include\BaseClasses</Filter>
+    </None>
+    <None Include="..\..\Source\GoNoGo\include\BaseClasses\ResultBase.hpp">
+      <Filter>Source\GoNoGo\include\BaseClasses</Filter>
+    </None>
+    <Filter Include="Source\GoNoGo\include\Criteria">
+      <UniqueIdentifier>{CB43E2EA-B2F3-49F0-BF86-FA359FAABC56}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\GoNoGo\include\Criteria\FuelLoadHold.hpp">
+      <Filter>Source\GoNoGo\include\Criteria</Filter>
+    </None>
+    <None Include="..\..\Source\GoNoGo\include\Criteria\FuelPressurizationHold.hpp">
+      <Filter>Source\GoNoGo\include\Criteria</Filter>
+    </None>
+    <None Include="..\..\Source\GoNoGo\include\Criteria\WindConditional.hpp">
+      <Filter>Source\GoNoGo\include\Criteria</Filter>
+    </None>
+    <Filter Include="Source\GoNoGo\include\Dispatches">
+      <UniqueIdentifier>{0DB84DC6-F1A3-4013-9317-10A62700C2EC}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\GoNoGo\include\Dispatches\LaunchDispatch.hpp">
+      <Filter>Source\GoNoGo\include\Dispatches</Filter>
+    </None>
+    <Filter Include="Source\GoNoGo\include\Helpers">
+      <UniqueIdentifier>{D5BCD39C-818C-4278-855E-B6984FB483BC}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\GoNoGo\include\Helpers\ChainHelper.hpp">
+      <Filter>Source\GoNoGo\include\Helpers</Filter>
+    </None>
+    <Filter Include="Source\GoNoGo\include\Results">
+      <UniqueIdentifier>{D96FDE21-2A7F-4D44-B519-FDDB9CD48962}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\GoNoGo\include\Results\IntResult.hpp">
+      <Filter>Source\GoNoGo\include\Results</Filter>
+    </None>
+    <None Include="..\..\Source\GoNoGo\include\Results\RangeResult.hpp">
+      <Filter>Source\GoNoGo\include\Results</Filter>
+    </None>
+    <None Include="..\..\Source\GoNoGo\include\Results\StringResult.hpp">
+      <Filter>Source\GoNoGo\include\Results</Filter>
+    </None>
+    <None Include="..\..\Source\GoNoGo\include\Results\VectorResult.hpp">
+      <Filter>Source\GoNoGo\include\Results</Filter>
+    </None>
+    <Filter Include="Source\GoNoGo\Resources">
+      <UniqueIdentifier>{6846A3BA-338E-41AB-9628-DC6530E2308C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\GoNoGo\Resources\Windows">
+      <UniqueIdentifier>{49A33167-2F4F-449D-AF58-D0C81E89E0E7}</UniqueIdentifier>
+    </Filter>
+    <ResourceCompile Include="..\..\Source\GoNoGo\Resources\Windows\GoNoGo.rc">
+      <Filter>Source\GoNoGo\Resources\Windows</Filter>
+    </ResourceCompile>
+    <Filter Include="Source\GoNoGo\src">
+      <UniqueIdentifier>{1BB7F059-17F9-4386-970D-DC0AA22110A2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\GoNoGo\src\BaseClasses">
+      <UniqueIdentifier>{F37127F3-B01B-45F6-ADC3-63F466641F63}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\ConditionalBase.cpp">
+      <Filter>Source\GoNoGo\src\BaseClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\DispatchBase.cpp">
+      <Filter>Source\GoNoGo\src\BaseClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\HoldBase.cpp">
+      <Filter>Source\GoNoGo\src\BaseClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\NodeBase.cpp">
+      <Filter>Source\GoNoGo\src\BaseClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\ResultBase.cpp">
+      <Filter>Source\GoNoGo\src\BaseClasses</Filter>
+    </ClCompile>
+    <Filter Include="Source\GoNoGo\src\Criteria">
+      <UniqueIdentifier>{AB732B50-E0F5-4785-BF9C-9C3F153CBE0F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GoNoGo\src\Criteria\FueldLoadHold.cpp">
+      <Filter>Source\GoNoGo\src\Criteria</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\src\Criteria\FuelPressurizationHold.cpp">
+      <Filter>Source\GoNoGo\src\Criteria</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\src\Criteria\WindConditional.cpp">
+      <Filter>Source\GoNoGo\src\Criteria</Filter>
+    </ClCompile>
+    <Filter Include="Source\GoNoGo\src\Dispatches">
+      <UniqueIdentifier>{1BF80F2A-5D0E-4D6B-9AFF-3864B2456331}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GoNoGo\src\Dispatches\LaunchDispatch.cpp">
+      <Filter>Source\GoNoGo\src\Dispatches</Filter>
+    </ClCompile>
+    <Filter Include="Source\GoNoGo\src\Helpers">
+      <UniqueIdentifier>{0E9308F4-592B-4986-8DE7-E6B54A9C607D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GoNoGo\src\Helpers\ChainHelper.cpp">
+      <Filter>Source\GoNoGo\src\Helpers</Filter>
+    </ClCompile>
+    <Filter Include="Source\GoNoGo\src\Results">
+      <UniqueIdentifier>{B3F07BA4-E784-4205-8E0B-4F00968B4A3F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GoNoGo\src\Results\IntResult.cpp">
+      <Filter>Source\GoNoGo\src\Results</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\src\Results\RangeResult.cpp">
+      <Filter>Source\GoNoGo\src\Results</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\src\Results\StringResult.cpp">
+      <Filter>Source\GoNoGo\src\Results</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\src\Results\VectorResult.cpp">
+      <Filter>Source\GoNoGo\src\Results</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\GoNoGo\include\BaseClasses\TelemetryBase.hpp">
+      <Filter>Source\GoNoGo\include\BaseClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GoNoGo\GoNoGo_PlayerController.h">
+      <Filter>Source\GoNoGo</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\GoNoGo\GoNoGo_PlayerController.cpp">
+      <Filter>Source\GoNoGo</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
