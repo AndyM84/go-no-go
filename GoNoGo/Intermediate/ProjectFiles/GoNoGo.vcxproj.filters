@@ -204,5 +204,8 @@
     <ClCompile Include="..\..\Source\GoNoGo\GoNoGo_PlayerController.cpp">
       <Filter>Source\GoNoGo</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\TelemetryBase.cpp">
+      <Filter>Source\GoNoGo\src\BaseClasses</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

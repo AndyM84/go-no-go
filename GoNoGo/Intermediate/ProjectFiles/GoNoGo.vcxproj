@@ -107,6 +107,7 @@
     <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\HoldBase.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\NodeBase.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\ResultBase.cpp" />
+    <ClCompile Include="..\..\Source\GoNoGo\src\BaseClasses\TelemetryBase.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\Criteria\FueldLoadHold.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\Criteria\FuelPressurizationHold.cpp" />
     <ClCompile Include="..\..\Source\GoNoGo\src\Criteria\WindConditional.cpp" />
