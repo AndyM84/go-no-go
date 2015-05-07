@@ -83,12 +83,12 @@
     <ClCompile Include="..\..\Source\GoNoGo\PlayerUI.cpp" />
     <ClInclude Include="..\..\Source\GoNoGo\GoNoGo_PlayerController.h" />
     <ClInclude Include="..\..\Source\GoNoGo\include\BaseClasses\TelemetryBase.hpp" />
+    <ClInclude Include="..\..\Source\GoNoGo\include\GoNoGo.hpp" />
     <ClInclude Include="..\..\Source\GoNoGo\PlayerUI.h" />
     <None Include="..\..\Source\GoNoGo\include\Core.hpp" />
     <None Include="..\..\Source\GoNoGo\include\N2f.hpp" />
     <None Include="..\..\Source\GoNoGo\include\BaseClasses\ConditionalBase.hpp" />
     <None Include="..\..\Source\GoNoGo\include\BaseClasses\DispatchBase.hpp" />
-    <None Include="..\..\Source\GoNoGo\include\BaseClasses\GoNoGo.hpp" />
     <None Include="..\..\Source\GoNoGo\include\BaseClasses\HoldBase.hpp" />
     <None Include="..\..\Source\GoNoGo\include\BaseClasses\NodeBase.hpp" />
     <None Include="..\..\Source\GoNoGo\include\BaseClasses\ResultBase.hpp" />

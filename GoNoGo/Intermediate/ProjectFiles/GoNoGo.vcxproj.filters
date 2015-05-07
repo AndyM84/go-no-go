@@ -71,9 +71,6 @@
     <None Include="..\..\Source\GoNoGo\include\BaseClasses\DispatchBase.hpp">
       <Filter>Source\GoNoGo\include\BaseClasses</Filter>
     </None>
-    <None Include="..\..\Source\GoNoGo\include\BaseClasses\GoNoGo.hpp">
-      <Filter>Source\GoNoGo\include\BaseClasses</Filter>
-    </None>
     <None Include="..\..\Source\GoNoGo\include\BaseClasses\HoldBase.hpp">
       <Filter>Source\GoNoGo\include\BaseClasses</Filter>
     </None>
@@ -198,6 +195,9 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\GoNoGo\GoNoGo_PlayerController.h">
       <Filter>Source\GoNoGo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GoNoGo\include\GoNoGo.hpp">
+      <Filter>Source\GoNoGo\include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
