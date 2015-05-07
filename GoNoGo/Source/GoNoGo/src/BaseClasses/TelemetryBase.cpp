@@ -11,22 +11,22 @@ TelemetryBase::TelemetryBase(std::string ModuleID, std::string Name, float Frame
 	return;
 }
 
-float TelemetryBase::GetDelta()
+const float TelemetryBase::GetDelta()
 {
 	return this->_delta;
 }
 
-float TelemetryBase::GetFrame()
+const float TelemetryBase::GetFrame()
 {
 	return this->_frame;
 }
 
-std::string TelemetryBase::GetModuleID()
+const std::string TelemetryBase::GetModuleID()
 {
 	return this->_moduleID;
 }
 
-std::string TelemetryBase::GetName()
+const std::string TelemetryBase::GetName()
 {
 	return this->_name;
 }
