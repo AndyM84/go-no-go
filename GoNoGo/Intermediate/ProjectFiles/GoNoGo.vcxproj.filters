@@ -208,4 +208,12 @@
       <Filter>Source\GoNoGo\src\BaseClasses</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source\GoNoGo\include\Telemetry">
+      <UniqueIdentifier>{39063f7d-1e9d-42f5-a50e-0b722dfad785}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\GoNoGo\src\Telemetry">
+      <UniqueIdentifier>{03f0410d-9659-488b-a74e-86ba59f3dbfc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
 </Project>
